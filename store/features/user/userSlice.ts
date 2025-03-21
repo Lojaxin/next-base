@@ -3,7 +3,7 @@ import type { RootState } from '@/store/index.d';
 import type { UserState } from './userType';
 import { fetchUser } from './userThunks';
 
-const initialState:RootState<UserState> = {
+const initialState: RootState<UserState> = {
     data: null,
     status: 'idle',
     error: null,
@@ -17,8 +17,8 @@ export const userSlice = createSlice({
             state.data = action.payload;
         },
     },
-    extraReducers: (builder) => {
-        builder.addCase(fetchUser.pending, (state) => {
+    extraReducers: builder => {
+        builder.addCase(fetchUser.pending, state => {
             state.status = 'loading';
         });
         builder.addCase(fetchUser.fulfilled, (state, action) => {
