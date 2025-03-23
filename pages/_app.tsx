@@ -18,11 +18,16 @@ const App = ({ Component, pageProps }: AppProps) => {
     const isLogin = router.pathname.startsWith('/login');
     return (
         <Provider store={store}>
-            <ThemeProvider>
+            <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+            >
                 {isLogin ? (
                     <Component {...pageProps} />
                 ) : (
-                <Layout>
+                    <Layout>
                         <Component {...pageProps} />
                     </Layout>
                 )}
