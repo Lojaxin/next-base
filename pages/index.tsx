@@ -1,4 +1,4 @@
-import { Button } from '@/components';
+import Button from '@/components/Button';
 import { useTranslation } from 'next-i18next';
 import { getStaticPropsWithTranslation } from '@/utils';
 
