@@ -4,9 +4,9 @@ import { getStaticPropsWithTranslation } from '@/utils';
 export default function Login() {
     const t = useTrans();
     return (
-        <div>
+        <div className='flex flex-col items-center justify-center h-screen'>
             {t('hello')}
-            login
+            <p className='text-2xl text-red-500'>login</p>
         </div>
     );
 }

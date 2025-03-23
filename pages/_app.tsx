@@ -4,6 +4,7 @@ import { appWithTranslation } from 'next-i18next';
 import { Provider } from 'react-redux';
 import Layout from '@/components/Layout';
 import { store } from '@/store';
+import '@/styles/global.css';
 /**
  * 全局组件
  * @param param0
