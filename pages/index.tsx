@@ -1,4 +1,3 @@
-import { Button } from '@/components';
 import { useTranslation } from 'next-i18next';
 import { getStaticPropsWithTranslation } from '@/utils';
 
@@ -7,7 +6,6 @@ export default function Home() {
     const { t } = useTranslation('common');
     return (
         <div>
-            <Button />
             {t('hello')}
         </div>
     );

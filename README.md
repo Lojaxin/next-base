@@ -36,3 +36,6 @@ nextjs-project/
 │   ├──  404.tsx 
 │   └── index.tsx
 
+
+
+pnpm dlx shadcn@latest init 安装shadcnui

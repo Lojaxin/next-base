@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { appWithTranslation } from 'next-i18next';
 import { Provider } from 'react-redux';
 import Layout from '@/components/Layout';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import { store } from '@/store';
 import '@/styles/global.css';
 /**
@@ -17,13 +18,15 @@ const App = ({ Component, pageProps }: AppProps) => {
     const isLogin = router.pathname.startsWith('/login');
     return (
         <Provider store={store}>
-            {isLogin ? (
-                <Component {...pageProps} />
-            ) : (
-                <Layout>
+            <ThemeProvider>
+                {isLogin ? (
                     <Component {...pageProps} />
-                </Layout>
-            )}
+                ) : (
+                <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                )}
+            </ThemeProvider>
         </Provider>
     );
 };
