@@ -62,7 +62,8 @@ nextjs-project/
 ## 三、集成多语言
 ### 1. 安装依赖
 ```bash
-pnpm add i18next react-i18next next-i18next
+# next-i18next内置集成 i18next react-i18next,因此不用单独安装
+pnpm add next-i18next
 ```
 ### 2. 创建多语言文件目录
 在根目录创建 `locales` 文件夹，用于存放多语言转换的 JSON 文件。
