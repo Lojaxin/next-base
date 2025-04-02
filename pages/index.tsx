@@ -7,6 +7,7 @@ export default function Home() {
     return (
         <div>
             {t('hello')}
+            <div className="animate-grid bg-red-500 h-20 w-full">123</div>
         </div>
     );
 }
